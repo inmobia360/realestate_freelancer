@@ -66,7 +66,7 @@ export default function PropertiesPage() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder={language === 'es' ? 'Buscar en Madrid, Barcelona, Valencia, Sevilla, Canarias...' : 'Search by title, city or region...'}
-              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 shadow-sm"
+              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
             />
           </div>
 
@@ -78,7 +78,7 @@ export default function PropertiesPage() {
                 title="Vista Cajetín"
                 className={`p-2 rounded-lg transition cursor-pointer ${
                   viewMode === 'grid'
-                    ? 'bg-violet-600 text-white shadow-sm'
+                    ? 'bg-orange-700 text-white shadow-sm'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
@@ -89,7 +89,7 @@ export default function PropertiesPage() {
                 title="Vista Lista"
                 className={`p-2 rounded-lg transition cursor-pointer ${
                   viewMode === 'list'
-                    ? 'bg-violet-600 text-white shadow-sm'
+                    ? 'bg-orange-700 text-white shadow-sm'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
@@ -100,18 +100,18 @@ export default function PropertiesPage() {
                 title="Vista Mapa Territorial"
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
                   viewMode === 'map'
-                    ? 'bg-gradient-to-r from-blue-600 to-violet-600 text-white shadow-sm'
+                    ? 'bg-[#C2410C] text-white shadow-sm'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
-                <Map className="w-4 h-4 text-cyan-300" />
+                <Map className="w-4 h-4 text-orange-700" />
                 <span>Mapa Región</span>
               </button>
             </div>
 
             <Link
               href="/app/properties/new"
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white rounded-xl text-sm font-semibold shadow-lg shadow-violet-600/20 transition shrink-0"
+              className="flex items-center gap-2 px-5 py-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white rounded-xl text-sm font-semibold shadow-lg shadow-orange-700/20 transition shrink-0"
             >
               <PlusCircle className="w-4 h-4" />
               <span>{language === 'es' ? 'Nueva Propiedad' : 'New Property'}</span>
@@ -135,7 +135,7 @@ export default function PropertiesPage() {
               onClick={() => setActiveFilter(f.key as typeof activeFilter)}
               className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition ${
                 activeFilter === f.key
-                  ? 'bg-violet-600 text-white shadow-sm'
+                  ? 'bg-orange-700 text-white shadow-sm'
                   : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
@@ -160,7 +160,7 @@ export default function PropertiesPage() {
             </div>
             <Link
               href="/app/properties/new"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-xl text-xs font-semibold"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-orange-700 text-white rounded-xl text-xs font-semibold"
             >
               <PlusCircle className="w-4 h-4" />
               <span>{language === 'es' ? 'Crear Propiedad' : 'Create Property'}</span>
@@ -227,7 +227,7 @@ export default function PropertiesPage() {
                             <span className="text-[11px] text-slate-400">{prop.area}</span>
                           </td>
                           <td className="py-3.5 px-4">
-                            <span className="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase bg-violet-50 dark:bg-violet-950/60 text-violet-700 dark:text-violet-300">
+                            <span className="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300">
                               {prop.operation === 'sale' ? 'Venta' : prop.operation === 'rent' ? 'Alquiler' : 'Inversión'}
                             </span>
                           </td>
@@ -246,7 +246,7 @@ export default function PropertiesPage() {
                             <div className="flex items-center justify-end gap-2">
                               <button
                                 onClick={() => setSelectedPropertyForAI(prop)}
-                                className="p-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/60 text-violet-600 dark:text-violet-400 hover:bg-violet-100 transition cursor-pointer"
+                                className="p-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 hover:bg-orange-100 transition cursor-pointer"
                                 title="Generar con IA"
                               >
                                 <Sparkles className="w-4 h-4" />

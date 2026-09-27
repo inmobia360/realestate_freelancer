@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { 
@@ -135,7 +135,7 @@ export default function ContentGeneratorPage() {
               <select
                 value={selectedPropertyId}
                 onChange={(e) => handlePropertyChange(e.target.value)}
-                className="w-full pl-9 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-9 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
               >
                 {properties.map((p) => (
                   <option key={p.id} value={p.id}>
@@ -150,7 +150,7 @@ export default function ContentGeneratorPage() {
             <button
               onClick={() => triggerGenerate()}
               disabled={isGenerating || !selectedProperty}
-              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold shadow-md shadow-blue-600/20 transition disabled:opacity-50"
+              className="flex items-center gap-2 px-5 py-2.5 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-xs font-bold shadow-md shadow-orange-700/20 transition disabled:opacity-50"
             >
               <RotateCw className={`w-4 h-4 ${isGenerating ? 'animate-spin' : ''}`} />
               <span>{isGenerating ? (language === 'es' ? 'Generando Pack IA...' : 'Generating...') : (language === 'es' ? 'Regenerar Todo el Pack' : 'Regenerate Content Pack')}</span>
@@ -189,7 +189,7 @@ export default function ContentGeneratorPage() {
                   onClick={() => setActiveTab(tab.key)}
                   className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-left transition ${
                     isSelected
-                      ? 'bg-blue-600 text-white shadow-sm'
+                      ? 'bg-orange-700 text-white shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/60 dark:hover:bg-slate-800'
                   }`}
                 >
@@ -227,7 +227,7 @@ export default function ContentGeneratorPage() {
 
                   <button
                     onClick={handleSave}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold shadow-sm transition"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-xs font-semibold shadow-sm transition"
                   >
                     <Save className="w-3.5 h-3.5" />
                     <span>{language === 'es' ? 'Guardar Cambios' : 'Save'}</span>
@@ -239,7 +239,7 @@ export default function ContentGeneratorPage() {
                 value={currentPack[activeTab] || ''}
                 onChange={(e) => setCurrentPack({ ...currentPack, [activeTab]: e.target.value })}
                 rows={12}
-                className="w-full flex-1 p-4 rounded-2xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed font-sans"
+                className="w-full flex-1 p-4 rounded-2xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed font-sans"
                 placeholder={language === 'es' ? 'Generando contenido con IA...' : 'Generating content with AI...'}
               />
             </div>

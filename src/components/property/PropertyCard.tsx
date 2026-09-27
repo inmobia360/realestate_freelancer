@@ -36,9 +36,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onOpenAIMo
     draft: { label: language === 'es' ? 'Borrador' : 'Draft', bg: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-600 dark:text-slate-300' },
     ready: { label: language === 'es' ? 'Listo' : 'Ready', bg: 'bg-amber-50 dark:bg-amber-950/40', text: 'text-amber-700 dark:text-amber-400' },
     published: { label: language === 'es' ? 'Publicado' : 'Published', bg: 'bg-emerald-50 dark:bg-emerald-950/40', text: 'text-emerald-700 dark:text-emerald-400' },
-    reserved: { label: language === 'es' ? 'Reservado' : 'Reserved', bg: 'bg-purple-50 dark:bg-purple-950/40', text: 'text-purple-700 dark:text-purple-400' },
-    sold: { label: language === 'es' ? 'Vendido' : 'Sold', bg: 'bg-blue-50 dark:bg-blue-950/40', text: 'text-blue-700 dark:text-blue-400' },
-    rented: { label: language === 'es' ? 'Alquilado' : 'Rented', bg: 'bg-indigo-50 dark:bg-indigo-950/40', text: 'text-indigo-700 dark:text-indigo-400' },
+    reserved: { label: language === 'es' ? 'Reservado' : 'Reserved', bg: 'bg-orange-50 dark:bg-orange-950/40', text: 'text-orange-700 dark:text-orange-300' },
+    sold: { label: language === 'es' ? 'Vendido' : 'Sold', bg: 'bg-orange-50 dark:bg-orange-950/40', text: 'text-orange-700 dark:text-orange-300' },
+    rented: { label: language === 'es' ? 'Alquilado' : 'Rented', bg: 'bg-slate-50 dark:bg-slate-950/40', text: 'text-slate-700 dark:text-slate-400' },
     archived: { label: language === 'es' ? 'Archivado' : 'Archived', bg: 'bg-rose-50 dark:bg-rose-950/40', text: 'text-rose-700 dark:text-rose-400' },
   };
 
@@ -156,7 +156,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onOpenAIMo
             <select
               value={property.status}
               onChange={(e) => handleStatusChange(e.target.value as PropertyStatus)}
-              className="w-full text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              className="w-full text-xs font-semibold bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 cursor-pointer"
             >
               <option value="draft">{language === 'es' ? 'Borrador interno' : 'Draft'}</option>
               <option value="ready">{language === 'es' ? 'Listo para publicar' : 'Ready to publish'}</option>
@@ -173,7 +173,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onOpenAIMo
             {/* AI Generator Button */}
             <button
               onClick={() => onOpenAIModal && onOpenAIModal(property)}
-              className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold shadow-sm transition"
+              className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-[#111A31] hover:bg-[#1A2740] text-white rounded-xl text-xs font-semibold shadow-sm transition"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>{language === 'es' ? 'Generar IA' : 'AI Content'}</span>

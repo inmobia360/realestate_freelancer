@@ -73,7 +73,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
       {/* Header Info */}
       <div className="flex items-center justify-between text-xs">
         <div className="flex items-center gap-2 font-bold text-slate-900 dark:text-white">
-          <span className={`w-2.5 h-2.5 rounded-full ${lead.temperature === 'hot' ? 'bg-rose-500 animate-pulse' : lead.temperature === 'warm' ? 'bg-amber-500' : 'bg-blue-500'}`}></span>
+          <span className={`w-2.5 h-2.5 rounded-full ${lead.temperature === 'hot' ? 'bg-rose-500 animate-pulse' : lead.temperature === 'warm' ? 'bg-amber-500' : 'bg-orange-500'}`}></span>
           <span>
             {language === 'es' 
               ? (lead.temperature === 'hot' ? 'Lead Caliente (Alta Intención)' : lead.temperature === 'warm' ? 'Lead Templado (En Maduración)' : 'Lead Frío (Exploratorio)')
@@ -88,7 +88,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
       {/* Main Row: Avatar + Name + Score */}
       <div className="flex items-center justify-between pt-1">
         <div className="flex items-center gap-3 min-w-0">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-violet-600 text-white font-extrabold text-sm flex items-center justify-center shrink-0 shadow-md">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#C2410C] to-[#F4510B] text-white font-extrabold text-sm flex items-center justify-center shrink-0 shadow-md">
             {initials}
           </div>
           <div className="min-w-0">
@@ -103,7 +103,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
 
         {/* Score */}
         <div className="text-right shrink-0">
-          <span className={`text-2xl font-black ${lead.score >= 80 ? 'text-rose-600 dark:text-rose-400' : lead.score >= 50 ? 'text-amber-600 dark:text-amber-400' : 'text-blue-600 dark:text-blue-400'}`}>
+          <span className={`text-2xl font-black ${lead.score >= 80 ? 'text-rose-600 dark:text-rose-400' : lead.score >= 50 ? 'text-amber-600 dark:text-amber-400' : 'text-orange-700 dark:text-orange-300'}`}>
             {lead.score}<span className="text-xs text-slate-400 font-semibold">/100</span>
           </span>
         </div>
@@ -112,7 +112,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
       {/* Progress Bar */}
       <div className="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
         <div 
-          className={`h-full rounded-full transition-all duration-500 ${lead.score >= 80 ? 'bg-gradient-to-r from-orange-500 to-rose-600' : lead.score >= 50 ? 'bg-gradient-to-r from-amber-400 to-amber-600' : 'bg-gradient-to-r from-blue-400 to-blue-600'}`}
+          className={`h-full rounded-full transition-all duration-500 ${lead.score >= 80 ? 'bg-gradient-to-r from-orange-500 to-rose-600' : lead.score >= 50 ? 'bg-gradient-to-r from-amber-400 to-amber-600' : 'bg-gradient-to-r from-orange-700 to-orange-700'}`}
           style={{ width: `${lead.score}%` }}
         />
       </div>
@@ -120,14 +120,14 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
       {/* Lead Specs Grid */}
       <div className="grid grid-cols-2 gap-4 text-xs pt-1">
         <div>
-          <span className="text-[11px] text-[#849089] block font-semibold">Presupuesto</span>
-          <span className="font-extrabold text-[#141c19] text-sm">
+          <span className="text-[11px] text-[#64748B] block font-semibold">Presupuesto</span>
+          <span className="font-extrabold text-[#172033] text-sm">
             {lead.budget ? `${lead.budget.toLocaleString()} €` : 'No especificado'}
           </span>
         </div>
         <div>
-          <span className="text-[11px] text-[#849089] block font-semibold">Plazo</span>
-          <span className="font-extrabold text-[#141c19] text-sm">
+          <span className="text-[11px] text-[#64748B] block font-semibold">Plazo</span>
+          <span className="font-extrabold text-[#172033] text-sm">
             {lead.timeframe ? (timeframeLabels[lead.timeframe] || lead.timeframe) : 'Flexible'}
           </span>
         </div>
@@ -135,46 +135,46 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
 
       {/* Lead Message Snippet */}
       {lead.message && (
-        <p className="text-xs text-[#53605a] bg-[#fbfcf9] p-3 rounded-xl border border-[#eaece4] italic leading-relaxed">
+        <p className="text-xs text-[#334B6B] bg-[#F7F9FC] p-3 rounded-xl border border-[#DCE4EF] italic leading-relaxed">
           &quot;{lead.message}&quot;
         </p>
       )}
 
       {/* Recommended Next Action Box */}
-      <div className="p-3.5 bg-[#fbfcf9] border border-[#eaece4] rounded-2xl space-y-1">
+      <div className="p-3.5 bg-[#F7F9FC] border border-[#DCE4EF] rounded-2xl space-y-1">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#6e7b75]">
-            <span className="text-[#df5433]">✦</span>
+          <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#334B6B]">
+            <span className="text-[#C2410C]">✦</span>
             <span>Próxima acción recomendada</span>
           </div>
           <button
             onClick={handleAnalyze}
             disabled={analyzing}
-            className="text-[10px] font-bold text-[#df5433] hover:underline disabled:opacity-50"
+            className="text-[10px] font-bold text-[#C2410C] hover:underline disabled:opacity-50"
           >
             {analyzing ? 'Analizando...' : 'Re-analizar con IA'}
           </button>
         </div>
-        <p className="text-xs font-bold text-[#141c19]">
+        <p className="text-xs font-bold text-[#172033]">
           {lead.recommendedAction || 'Llamar en menos de 15 minutos'}
         </p>
       </div>
 
       {/* Contact & Status Bar */}
-      <div className="pt-2 border-t border-[#eaece4] flex flex-wrap items-center justify-between gap-2">
+      <div className="pt-2 border-t border-[#DCE4EF] flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           {cleanPhone && (
             <>
               <a
                 href={`tel:${cleanPhone}`}
-                className="flex items-center gap-1 px-3 py-1.5 bg-[#f4f5f0] hover:bg-[#eaece4] text-[#141c19] rounded-lg text-xs font-semibold transition"
+                className="flex items-center gap-1 px-3 py-1.5 bg-[#FFF1E6] hover:bg-[#DCE4EF] text-[#172033] rounded-lg text-xs font-semibold transition"
                 title="Llamar"
               >
-                <Phone className="w-3.5 h-3.5 text-[#162e26]" />
+                <Phone className="w-3.5 h-3.5 text-[#111A31]" />
                 <span>{lead.phone}</span>
               </a>
               <a
-                href={`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(`Hola ${lead.name}, te contacto desde habita. en relación a tu consulta sobre "${lead.propertyName || 'la propiedad'}".`)}`}
+                href={`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${encodeURIComponent(`Hola ${lead.name}, te contacto desde Inmobia 360 en relación a tu consulta sobre "${lead.propertyName || 'la propiedad'}".`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="p-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg transition"
@@ -188,7 +188,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
           {lead.email && (
             <a
               href={`mailto:${lead.email}`}
-              className="p-1.5 bg-[#f4f5f0] hover:bg-[#eaece4] text-[#53605a] rounded-lg transition"
+              className="p-1.5 bg-[#FFF1E6] hover:bg-[#DCE4EF] text-[#334B6B] rounded-lg transition"
               title={lead.email}
             >
               <Mail className="w-4 h-4" />
@@ -200,7 +200,7 @@ export const LeadCard: React.FC<LeadCardProps> = ({ lead }) => {
           <select
             value={lead.status}
             onChange={(e) => handleStatusChange(e.target.value as LeadStatus)}
-            className="text-xs font-semibold bg-[#f4f5f0] border border-[#eaece4] rounded-lg px-2 py-1 text-[#141c19] focus:outline-none"
+            className="text-xs font-semibold bg-[#FFF1E6] border border-[#DCE4EF] rounded-lg px-2 py-1 text-[#172033] focus:outline-none"
           >
             <option value="new">Nuevo</option>
             <option value="contacted">Contactado</option>

@@ -96,9 +96,9 @@ export const AIWritingAdvisor: React.FC<AIWritingAdvisorProps> = ({
         </div>
       ) : (
         <div className="space-y-2">
-          <div className="flex items-center justify-between p-2.5 rounded-xl bg-violet-500/10 border border-violet-500/30 text-xs">
-            <div className="flex items-center gap-2 text-violet-700 dark:text-violet-300 font-bold">
-              <Sparkles className="w-4 h-4 text-cyan-400 animate-pulse" />
+          <div className="flex items-center justify-between p-2.5 rounded-xl bg-orange-500/10 border border-orange-500/30 text-xs">
+            <div className="flex items-center gap-2 text-orange-700 dark:text-orange-300 font-bold">
+              <Sparkles className="w-4 h-4 text-orange-700 animate-pulse" />
               <span>
                 {language === 'es'
                   ? `Asesor IA: ${suggestions.length} sugerencia(s) de ortografía y estilo`
@@ -118,9 +118,9 @@ export const AIWritingAdvisor: React.FC<AIWritingAdvisorProps> = ({
               <button
                 type="button"
                 onClick={handleFixAll}
-                className="flex items-center gap-1 px-3 py-1 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-bold text-[11px] shadow-sm transition cursor-pointer"
+                className="flex items-center gap-1 px-3 py-1 rounded-lg bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-[11px] shadow-sm transition cursor-pointer"
               >
-                <Wand2 className="w-3 h-3 text-cyan-300" />
+                <Wand2 className="w-3 h-3 text-orange-700" />
                 <span>{language === 'es' ? 'Corregir con 1 Clic' : 'Auto-Fix All'}</span>
               </button>
             </div>
@@ -134,7 +134,7 @@ export const AIWritingAdvisor: React.FC<AIWritingAdvisorProps> = ({
                     <div className="flex items-center gap-2">
                       <span className="line-through text-rose-400 font-mono">{s.original}</span>
                       <ArrowRight className="w-3 h-3 text-slate-500" />
-                      <span className="text-cyan-300 font-bold font-mono">{s.replacement}</span>
+                      <span className="text-orange-700 font-bold font-mono">{s.replacement}</span>
                     </div>
                     <p className="text-[10px] text-slate-400">{s.reason}</p>
                   </div>

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
@@ -32,13 +32,13 @@ export const Toast: React.FC<ToastProps> = ({
   const bgStyles = {
     success: 'bg-emerald-950/90 border-emerald-500/50 text-emerald-100',
     error: 'bg-rose-950/90 border-rose-500/50 text-rose-100',
-    info: 'bg-blue-950/90 border-blue-500/50 text-blue-100'
+    info: 'bg-orange-950/90 border-orange-500/50 text-orange-100'
   }[type];
 
   const icons = {
     success: <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />,
     error: <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />,
-    info: <Info className="w-5 h-5 text-blue-400 shrink-0" />
+    info: <Info className="w-5 h-5 text-orange-700 shrink-0" />
   }[type];
 
   return (

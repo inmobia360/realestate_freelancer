@@ -54,7 +54,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   if (!href) return content;
 
   return (
-    <Link href={href} aria-label="Inmobia 360 — Inicio" className="inline-flex rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7900]">
+    <Link href={href} aria-label="Inmobia 360 — Inicio" className="inline-flex rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C2410C]">
       {content}
     </Link>
   );

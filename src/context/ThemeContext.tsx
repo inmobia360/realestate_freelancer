@@ -13,7 +13,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>('dark');
+  const [theme, setThemeState] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   const applyTheme = (t: Theme) => {
@@ -46,11 +46,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setMounted(true);
     try {
       const savedTheme = localStorage.getItem('pmh_theme') as Theme | null;
-      const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+      const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'light';
       setThemeState(initialTheme);
       applyTheme(initialTheme);
     } catch (e) {
-      applyTheme('dark');
+      applyTheme('light');
     }
   }, []);
 

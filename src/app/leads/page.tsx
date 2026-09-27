@@ -74,11 +74,11 @@ function LeadsContent() {
           </div>
 
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 flex items-center gap-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-300 flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{language === 'es' ? 'Puntuación Media IA' : 'Avg AI Score'}</span>
             </span>
-            <div className="text-2xl font-black text-blue-700 dark:text-blue-400 mt-1">{avgScore}<span className="text-xs text-slate-500 dark:text-slate-400 font-normal">/100</span></div>
+            <div className="text-2xl font-black text-orange-700 dark:text-orange-300 mt-1">{avgScore}<span className="text-xs text-slate-500 dark:text-slate-400 font-normal">/100</span></div>
             <span className="text-xs text-slate-600 dark:text-slate-400">{language === 'es' ? 'Calidad de prospectos' : 'Lead quality'}</span>
           </div>
         </div>
@@ -92,7 +92,7 @@ function LeadsContent() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder={language === 'es' ? 'Buscar por nombre, email, teléfono o propiedad...' : 'Search by name, email, phone or property...'}
-              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="w-full pl-10 pr-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-sm"
             />
           </div>
 
@@ -121,7 +121,7 @@ function LeadsContent() {
               </button>
               <button
                 onClick={() => setTempFilter('cold')}
-                className={`px-3 py-1.5 rounded-lg flex items-center gap-1 transition cursor-pointer ${tempFilter === 'cold' ? 'bg-blue-600 text-white' : 'text-blue-700 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/30'}`}
+                className={`px-3 py-1.5 rounded-lg flex items-center gap-1 transition cursor-pointer ${tempFilter === 'cold' ? 'bg-orange-700 text-white' : 'text-orange-700 dark:text-orange-300 hover:bg-orange-50 dark:hover:bg-orange-950/30'}`}
               >
                 <Snowflake className="w-3.5 h-3.5" />
                 <span>{language === 'es' ? `Fríos (${coldCount})` : `Cold (${coldCount})`}</span>
@@ -132,15 +132,15 @@ function LeadsContent() {
 
         {/* Leads List */}
         {filteredLeads.length === 0 ? (
-          <div className="bg-white border border-[#eaece4] rounded-3xl p-12 text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-[#f4f5f0] text-[#849089] flex items-center justify-center mx-auto">
+          <div className="bg-white border border-[#DCE4EF] rounded-3xl p-12 text-center space-y-4">
+            <div className="w-16 h-16 rounded-2xl bg-[#FFF1E6] text-[#64748B] flex items-center justify-center mx-auto">
               <Users2 className="w-8 h-8" />
             </div>
             <div>
-              <h3 className="text-base font-bold text-[#141c19]">
+              <h3 className="text-base font-bold text-[#172033]">
                 {language === 'es' ? 'No hay leads en este filtro' : 'No leads matching this filter'}
               </h3>
-              <p className="text-xs text-[#6e7b75] mt-1">
+              <p className="text-xs text-[#334B6B] mt-1">
                 {language === 'es' ? 'Los contactos captados a través del formulario de tus landing pages aparecerán aquí automáticamente.' : 'Leads captured on public property landing pages will appear here.'}
               </p>
             </div>

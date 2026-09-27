@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -51,34 +51,34 @@ function DashboardContent() {
         {/* Top Metric Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Card 1: Published Properties */}
-          <div className="bg-white border border-[#eaece4] rounded-2xl p-5 shadow-sm hover:border-[#df5433]/40 transition">
+          <div className="bg-white border border-[#DCE4EF] rounded-2xl p-5 shadow-sm hover:border-[#C2410C]/40 transition">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#6e7b75]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#334B6B]">
                 {language === 'es' ? 'Propiedades Publicadas' : 'Active Properties'}
               </span>
-              <div className="w-8 h-8 rounded-xl bg-[#f4f5f0] text-[#162e26] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-[#FFF1E6] text-[#111A31] flex items-center justify-center">
                 <Building2 className="w-4 h-4" />
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-3xl font-black text-[#141c19]">
+              <span className="text-3xl font-black text-[#172033]">
                 {publishedProps}
               </span>
-              <span className="text-xs text-[#849089]">
+              <span className="text-xs text-[#64748B]">
                 / {totalProps} {language === 'es' ? 'en catálogo' : 'in catalog'}
               </span>
             </div>
-            <div className="mt-2 flex items-center gap-2 text-xs text-[#6e7b75]">
+            <div className="mt-2 flex items-center gap-2 text-xs text-[#334B6B]">
               <span className="text-amber-700 font-semibold">{draftProps} borradores</span>
               <span>•</span>
-              <span className="text-[#162e26] font-semibold">{readyProps} listas</span>
+              <span className="text-[#111A31] font-semibold">{readyProps} listas</span>
             </div>
           </div>
 
           {/* Card 2: Total Leads */}
-          <div className="bg-white border border-[#eaece4] rounded-2xl p-5 shadow-sm hover:border-[#df5433]/40 transition">
+          <div className="bg-white border border-[#DCE4EF] rounded-2xl p-5 shadow-sm hover:border-[#C2410C]/40 transition">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#6e7b75]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#334B6B]">
                 {language === 'es' ? 'Leads Recibidos' : 'Leads Captured'}
               </span>
               <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
@@ -86,11 +86,11 @@ function DashboardContent() {
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-3xl font-black text-[#141c19]">
+              <span className="text-3xl font-black text-[#172033]">
                 {totalLeads}
               </span>
               {newLeads > 0 && (
-                <span className="px-2 py-0.5 bg-[#df5433]/15 text-[#df5433] text-xs font-bold rounded-full">
+                <span className="px-2 py-0.5 bg-[#C2410C]/15 text-[#C2410C] text-xs font-bold rounded-full">
                   +{newLeads} {language === 'es' ? 'nuevos' : 'new'}
                 </span>
               )}
@@ -102,62 +102,62 @@ function DashboardContent() {
           </div>
 
           {/* Card 3: Hot Leads Priority */}
-          <div className="bg-white border border-[#f5d9d0] rounded-2xl p-5 shadow-sm hover:border-[#df5433] transition">
+          <div className="bg-white border border-[#FED7AA] rounded-2xl p-5 shadow-sm hover:border-[#C2410C] transition">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#df5433]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#C2410C]">
                 {language === 'es' ? 'Leads Prioritarios' : 'Hot Priority Leads'}
               </span>
-              <div className="w-8 h-8 rounded-xl bg-[#f5d9d0] text-[#df5433] flex items-center justify-center">
-                <Flame className="w-4 h-4 fill-[#df5433]" />
+              <div className="w-8 h-8 rounded-xl bg-[#FED7AA] text-[#C2410C] flex items-center justify-center">
+                <Flame className="w-4 h-4 fill-[#C2410C]" />
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-3xl font-black text-[#df5433]">
+              <span className="text-3xl font-black text-[#C2410C]">
                 {hotLeads.length}
               </span>
-              <span className="text-xs text-[#df5433] font-bold uppercase">
+              <span className="text-xs text-[#C2410C] font-bold uppercase">
                 Score &gt; 80/100
               </span>
             </div>
-            <p className="mt-2 text-xs text-[#6e7b75] truncate">
+            <p className="mt-2 text-xs text-[#334B6B] truncate">
               {language === 'es' ? 'Requieren contacto prioritario' : 'Immediate response needed'}
             </p>
           </div>
 
           {/* Card 4: Impressions */}
-          <div className="bg-white border border-[#eaece4] rounded-2xl p-5 shadow-sm hover:border-[#df5433]/40 transition">
+          <div className="bg-white border border-[#DCE4EF] rounded-2xl p-5 shadow-sm hover:border-[#C2410C]/40 transition">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#6e7b75]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#334B6B]">
                 {language === 'es' ? 'Impactos y Visitas' : 'Landing Impressions'}
               </span>
-              <div className="w-8 h-8 rounded-xl bg-[#f4f5f0] text-[#162e26] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-[#FFF1E6] text-[#111A31] flex items-center justify-center">
                 <Eye className="w-4 h-4" />
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-2">
-              <span className="text-3xl font-black text-[#141c19]">
+              <span className="text-3xl font-black text-[#172033]">
                 {totalViews.toLocaleString()}
               </span>
-              <span className="text-xs text-[#df5433] font-semibold">
+              <span className="text-xs text-[#C2410C] font-semibold">
                 {((totalLeads / (totalViews || 1)) * 100).toFixed(1)}% conversión
               </span>
             </div>
-            <p className="mt-2 text-xs text-[#6e7b75] truncate">
+            <p className="mt-2 text-xs text-[#334B6B] truncate">
               {language === 'es' ? 'Tráfico en enlaces públicos' : 'Public shared traffic'}
             </p>
           </div>
         </div>
 
         {/* Quick Actions Strip */}
-        <div className="bg-[#162e26] rounded-3xl p-6 text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="bg-[#111A31] rounded-3xl p-6 text-white shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-[#df5433] fill-[#df5433]" />
+              <Zap className="w-5 h-5 text-[#C2410C] fill-[#C2410C]" />
               <h2 className="text-lg font-extrabold text-white">
-                {language === 'es' ? 'Acciones Rápidas habita.' : 'Quick Operations'}
+                {language === 'es' ? 'Acciones Rápidas Inmobia 360' : 'Quick Operations'}
               </h2>
             </div>
-            <p className="text-xs text-[#9bb0a7] max-w-xl">
+            <p className="text-xs text-[#CBD5E1] max-w-xl">
               Publica fichas, genera copys multicanal con IA verificada y comparte las landings con compradores.
             </p>
           </div>
@@ -165,7 +165,7 @@ function DashboardContent() {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/properties/new"
-              className="flex items-center gap-2 px-4 py-2.5 bg-[#df5433] hover:bg-[#c94627] text-white rounded-xl text-xs font-bold transition shadow-sm"
+              className="flex items-center gap-2 px-4 py-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white rounded-xl text-xs font-bold transition shadow-sm"
             >
               <PlusCircle className="w-4 h-4" />
               <span>{language === 'es' ? 'Crear Propiedad' : 'New Property'}</span>
@@ -175,7 +175,7 @@ function DashboardContent() {
               href="/content-generator"
               className="flex items-center gap-2 px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl text-xs font-semibold backdrop-blur-md transition"
             >
-              <Sparkles className="w-4 h-4 text-[#df5433]" />
+              <Sparkles className="w-4 h-4 text-[#C2410C]" />
               <span>{language === 'es' ? 'Generador IA' : 'AI Content Hub'}</span>
             </Link>
 
@@ -194,14 +194,14 @@ function DashboardContent() {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Flame className="w-5 h-5 text-[#df5433] fill-[#df5433]" />
-                <h3 className="text-base font-extrabold text-[#141c19]">
+                <Flame className="w-5 h-5 text-[#C2410C] fill-[#C2410C]" />
+                <h3 className="text-base font-extrabold text-[#172033]">
                   {language === 'es' ? 'Leads Calientes Prioritarios' : 'Priority Hot Leads'}
                 </h3>
               </div>
               <Link 
                 href="/leads" 
-                className="text-xs font-bold text-[#df5433] hover:underline flex items-center gap-1"
+                className="text-xs font-bold text-[#C2410C] hover:underline flex items-center gap-1"
               >
                 <span>{language === 'es' ? 'Ver todos los leads' : 'View all leads'}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -220,14 +220,14 @@ function DashboardContent() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-[#162e26]" />
-              <h3 className="text-base font-extrabold text-[#141c19]">
+              <Building2 className="w-5 h-5 text-[#111A31]" />
+              <h3 className="text-base font-extrabold text-[#172033]">
                 {language === 'es' ? 'Propiedades Recientes en Cartera' : 'Recent Property Listings'}
               </h3>
             </div>
             <Link 
               href="/properties" 
-              className="text-xs font-bold text-[#df5433] hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-[#C2410C] hover:underline flex items-center gap-1"
             >
               <span>{language === 'es' ? 'Ver catálogo completo' : 'View full catalog'}</span>
               <ArrowUpRight className="w-3.5 h-3.5" />

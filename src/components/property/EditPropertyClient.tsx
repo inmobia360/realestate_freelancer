@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -19,13 +19,13 @@ function EditPropertyInner({ id }: { id: string }) {
       <>
         <DashboardHeader title={language === 'es' ? 'Propiedad no encontrada' : 'Property not found'} />
         <div className="p-8 max-w-lg mx-auto text-center space-y-4">
-          <Building2 className="w-12 h-12 text-[#849089] mx-auto" />
-          <p className="text-sm text-[#6e7b75]">
+          <Building2 className="w-12 h-12 text-[#64748B] mx-auto" />
+          <p className="text-sm text-[#334B6B]">
             {language === 'es' ? 'No se pudo localizar el inmueble solicitado.' : 'The requested property could not be found.'}
           </p>
           <button
             onClick={() => router.push('/properties')}
-            className="px-4 py-2 bg-[#df5433] text-white rounded-xl text-xs font-bold"
+            className="px-4 py-2 bg-[#C2410C] text-white rounded-xl text-xs font-bold"
           >
             {language === 'es' ? 'Volver a Propiedades' : 'Back to Properties'}
           </button>

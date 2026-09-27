@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { 
@@ -118,7 +118,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Ej: Carlos Fernández"
-              className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
         </div>
@@ -137,7 +137,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="ejemplo@email.com"
-                className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
               />
             </div>
           </div>
@@ -154,7 +154,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+34 600 000 000"
-                className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
               />
             </div>
           </div>
@@ -169,7 +169,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
             <select
               value={inquiryType}
               onChange={(e) => setInquiryType(e.target.value as InquiryType)}
-              className="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="buy">Comprar la propiedad</option>
               <option value="visit">Solicitar visita presencial</option>
@@ -187,7 +187,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
             <select
               value={timeframe}
               onChange={(e) => setTimeframe(e.target.value as 'immediate' | '1_3_months' | '3_6_months' | 'exploring')}
-              className="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="immediate">Inmediato (&lt; 30 días)</option>
               <option value="1_3_months">De 1 a 3 meses</option>
@@ -209,7 +209,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
               placeholder="250000"
-              className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
         </div>
@@ -224,7 +224,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
             required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed"
+            className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed"
           />
         </div>
 
@@ -236,7 +236,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
               required
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
-              className="w-4 h-4 mt-0.5 text-blue-600 rounded focus:ring-blue-500 shrink-0"
+              className="w-4 h-4 mt-0.5 text-orange-700 rounded focus:ring-orange-500 shrink-0"
             />
             <span>
               Acepto la política de privacidad y autorizo el tratamiento de mis datos de contacto conforme a la normativa RGPD para recibir información sobre esta propiedad.
@@ -248,7 +248,7 @@ export const LeadCaptureForm: React.FC<LeadCaptureFormProps> = ({ property, onSu
       <button
         type="submit"
         disabled={submitting}
-        className="w-full flex items-center justify-center gap-2 py-3.5 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white rounded-xl font-bold text-sm shadow-lg shadow-blue-600/25 transition disabled:opacity-50"
+        className="w-full flex items-center justify-center gap-2 py-3.5 bg-orange-700 hover:bg-orange-500 active:bg-orange-700 text-white rounded-xl font-bold text-sm shadow-lg shadow-orange-700/25 transition disabled:opacity-50"
       >
         <Send className="w-4 h-4" />
         <span>{submitting ? 'Enviando solicitud...' : 'Solicitar Información y Visita'}</span>

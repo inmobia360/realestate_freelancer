@@ -45,17 +45,17 @@ export default function DemoPage() {
   const Icon = current.icon;
 
   return (
-    <main className="min-h-screen bg-[#F8FAFC] px-5 py-8 text-slate-900 dark:bg-[#080b18] dark:text-slate-100 sm:px-8">
+    <main className="min-h-screen bg-[#F7F9FC] px-5 py-8 text-slate-900 dark:bg-[#111A31] dark:text-slate-100 sm:px-8">
       <div className="mx-auto max-w-5xl">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-cyan-400">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-orange-700 dark:text-slate-300 dark:hover:text-orange-300">
           <ArrowLeft className="h-4 w-4" /> Volver a Inmobia 360
         </Link>
 
-        <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl dark:border-indigo-500/25 dark:bg-[#0c1024]">
-          <div className="border-b border-slate-200 px-6 py-5 dark:border-indigo-500/20 sm:px-10">
+        <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl dark:border-slate-500/25 dark:bg-[#1A2740]">
+          <div className="border-b border-slate-200 px-6 py-5 dark:border-slate-500/20 sm:px-10">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-extrabold uppercase tracking-widest text-blue-600 dark:text-cyan-400">Recorrido guiado · 2 minutos</p>
+                <p className="text-xs font-extrabold uppercase tracking-widest text-orange-700 dark:text-orange-300">Recorrido guiado · 2 minutos</p>
                 <h1 className="mt-2 text-2xl font-black sm:text-3xl">Conoce el flujo antes de registrarte</h1>
               </div>
               <span className="inline-flex items-center gap-2 rounded-full border border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-900 dark:border-amber-500/30 dark:bg-amber-950/40 dark:text-amber-200">
@@ -64,19 +64,19 @@ export default function DemoPage() {
             </div>
             <div className="mt-6 flex gap-2" aria-label={`Paso ${step + 1} de ${steps.length}`}>
               {steps.map((item, index) => (
-                <button key={item.eyebrow} onClick={() => setStep(index)} aria-label={`Ir al paso ${index + 1}: ${item.title}`} aria-current={index === step ? 'step' : undefined} className={`h-2 flex-1 rounded-full transition ${index <= step ? 'bg-blue-600 dark:bg-cyan-400' : 'bg-slate-200 dark:bg-slate-700'}`} />
+                <button key={item.eyebrow} onClick={() => setStep(index)} aria-label={`Ir al paso ${index + 1}: ${item.title}`} aria-current={index === step ? 'step' : undefined} className={`h-2 flex-1 rounded-full transition ${index <= step ? 'bg-orange-700 dark:bg-orange-700' : 'bg-slate-200 dark:bg-slate-700'}`} />
               ))}
             </div>
           </div>
 
           <div className="grid gap-8 px-6 py-8 sm:px-10 sm:py-10 md:grid-cols-[1fr_0.85fr]">
             <div className="flex flex-col justify-center">
-              <p className="text-xs font-bold uppercase tracking-widest text-violet-600 dark:text-violet-300">{current.eyebrow}</p>
-              <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-700 dark:bg-cyan-950/60 dark:text-cyan-300"><Icon className="h-6 w-6" /></div>
+              <p className="text-xs font-bold uppercase tracking-widest text-orange-700 dark:text-orange-300">{current.eyebrow}</p>
+              <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300"><Icon className="h-6 w-6" /></div>
               <h2 className="mt-5 text-2xl font-black leading-tight sm:text-3xl">{current.title}</h2>
               <p className="mt-4 max-w-xl leading-relaxed text-slate-600 dark:text-slate-300">{current.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={current.href} className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-5 py-3 font-bold text-white shadow-lg shadow-violet-600/20">
+                <Link href={current.href} className="inline-flex items-center gap-2 rounded-xl bg-[#C2410C] px-5 py-3 font-bold text-white shadow-lg shadow-orange-700/20">
                   {current.action}<ArrowRight className="h-4 w-4" />
                 </Link>
                 {step < steps.length - 1 ? (
@@ -87,8 +87,8 @@ export default function DemoPage() {
               </div>
             </div>
 
-            <aside className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-indigo-500/20 dark:bg-slate-950/50">
-              <div className="flex items-center gap-2 text-sm font-bold"><Check className="h-4 w-4 text-emerald-600 dark:text-cyan-400" /> Qué puedes comprobar</div>
+            <aside className="rounded-2xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-500/20 dark:bg-slate-950/50">
+              <div className="flex items-center gap-2 text-sm font-bold"><Check className="h-4 w-4 text-emerald-600 dark:text-orange-300" /> Qué puedes comprobar</div>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                 <li>Cómo se organiza el panel, las propiedades, el generador y los leads.</li>
                 <li>Qué pasos requieren tu revisión antes de compartir contenido.</li>
@@ -98,7 +98,7 @@ export default function DemoPage() {
             </aside>
           </div>
 
-          <div className="flex items-center justify-between border-t border-slate-200 px-6 py-4 text-xs font-semibold text-slate-500 dark:border-indigo-500/20 dark:text-slate-400 sm:px-10">
+          <div className="flex items-center justify-between border-t border-slate-200 px-6 py-4 text-xs font-semibold text-slate-500 dark:border-slate-500/20 dark:text-slate-400 sm:px-10">
             <button onClick={() => setStep(Math.max(0, step - 1))} disabled={step === 0} className="disabled:cursor-not-allowed disabled:opacity-40">Paso anterior</button>
             <span>{step + 1} de {steps.length}</span>
             <button onClick={() => setStep(Math.min(steps.length - 1, step + 1))} disabled={step === steps.length - 1} className="disabled:cursor-not-allowed disabled:opacity-40">Siguiente</button>

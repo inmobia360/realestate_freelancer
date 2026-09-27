@@ -20,26 +20,25 @@ Dirección consolidada desde el brief de identidad del repositorio, las capturas
 
 El PNG aprobado mide 1254 × 1254 px y tiene transparencia alfa. Es la fuente maestra para salidas raster. `public/brand/inmobia360-mark.svg` y `public/brand/inmobia360-logo.svg` incrustan una versión reducida de la imagen; son envoltorios SVG con contenido raster, no trazados vectoriales independientes. Si hace falta un vector puro, el componente `BrandIcon` de [inmobia360/ai.broker](https://github.com/inmobia360/ai.broker/blob/main/src/components/brand/BrandLogo.tsx) es la referencia geométrica concordante.
 
-## Paleta objetivo provisional
+## Paleta digital vigente
 
 | Token semántico | Aproximación visual | Función |
 |---|---:|---|
-| `brand-orange` | `#FF8A00` | Naranja documentado en el isotipo y wordmark |
-| `ink-navy` | `#161E2E` | Navy documentado en la casa y wordmark |
-| `brand-blue` | `#1D63FF` | Torre del isotipo |
-| `brand-blue-deep` | `#0B3CB3` | Degradado de la torre |
-| `brand-turquoise` | `#00D2B4` | Anillo orbital |
-| `brand-orange-ui` | `#FF7A00` aprox. | CTA de las capturas; muestra visual aproximada |
-| `ink-navy-ui` | `#111A31` aprox. | Titulares/UI de las capturas; muestra aproximada |
-| `text-primary` | `#172033` | Texto principal |
-| `text-secondary` | `#334B6B` | Párrafos y metadatos |
-| `canvas` | `#F7F9FC` | Fondo general |
-| `surface` | `#FFFFFF` | Tarjetas y controles |
-| `border-subtle` | `#DCE4EF` | Bordes y separadores |
-| `state-safe` | `#00A878` | Confirmación/seguridad cuando el estado es real |
-| `state-pending-bg` | `#FFF0D8` | Fondo de avisos pendientes |
+| `brand-orange` | `#FF8A00` | Naranja original del isotipo y wordmark; conservar en la marca gráfica. |
+| `brand-orange-action` | `#C2410C` | Acciones con texto blanco y enlaces destacados; contraste suficiente para UI. |
+| `brand-orange-hover` | `#9A3412` | Hover/pressed de acciones naranjas. |
+| `ink-navy` | `#111A31` | Titulares, navegación, paneles oscuros y texto de marca. |
+| `brand-blue` | `#1D63FF` | Torre del isotipo; no usar como color principal de interfaz. |
+| `brand-turquoise` | `#00D2B4` | Aro orbital del isotipo; reservar como acento gráfico secundario. |
+| `text-primary` | `#172033` | Texto principal en tema claro. |
+| `text-secondary` | `#334B6B` | Párrafos, metadatos y navegación secundaria. |
+| `canvas` | `#F7F9FC` | Fondo general en tema claro. |
+| `surface` | `#FFFFFF` | Tarjetas y controles. |
+| `border-subtle` | `#DCE4EF` | Bordes y separadores. |
+| `state-safe` | `#008C68` | Confirmación/seguridad solo cuando el estado sea real. |
+| `state-pending-bg` | `#FFF0D8` | Fondo para avisos pendientes de revisión. |
 
-Los primeros cinco valores están documentados en el código del logotipo y deben conservarse en el isotipo. Los dos tokens de UI son aproximaciones visuales. Comprobar contraste WCAG al aplicarlos a la interfaz sin alterar el PNG aprobado.
+La interfaz usa naranja tostado para botones con texto blanco, no el naranja luminoso del wordmark: así mantiene el carácter de marca con contraste legible. El tema oscuro usa navy (`#111A31`) y superficies (`#1A2740`); el tema claro es el valor inicial. Los azules y turquesas del símbolo se conservan en el isotipo, no como paleta general de controles.
 
 ## Lenguaje de interfaz
 

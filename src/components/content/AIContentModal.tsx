@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import { 
@@ -120,13 +120,13 @@ export const AIContentModal: React.FC<AIContentModalProps> = ({ property, isOpen
         {/* Header */}
         <div className="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600/10 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-orange-700/10 dark:bg-orange-900/30 text-orange-700 flex items-center justify-center">
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <span>{language === 'es' ? 'Generador de Contenidos IA' : 'AI Marketing Content Generator'}</span>
-                <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-[10px] font-bold rounded-full uppercase">
+                <span className="px-2 py-0.5 bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 text-[10px] font-bold rounded-full uppercase">
                   Zero Hallucination
                 </span>
               </h3>
@@ -177,7 +177,7 @@ export const AIContentModal: React.FC<AIContentModalProps> = ({ property, isOpen
                   onClick={() => setActiveTab(t.key)}
                   className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold text-left transition ${
                     isSelected
-                      ? 'bg-blue-600 text-white shadow-sm'
+                      ? 'bg-orange-700 text-white shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800'
                   }`}
                 >
@@ -210,7 +210,7 @@ export const AIContentModal: React.FC<AIContentModalProps> = ({ property, isOpen
                 value={contentPack[activeTab] || ''}
                 onChange={(e) => setContentPack({ ...contentPack, [activeTab]: e.target.value })}
                 rows={activeTab === 'longDescription' || activeTab === 'videoScript' ? 10 : 5}
-                className="w-full flex-1 p-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed font-sans"
+                className="w-full flex-1 p-4 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed font-sans"
                 placeholder={language === 'es' ? 'El contenido generado aparecerá aquí...' : 'Generated copy will appear here...'}
               />
             </div>
@@ -237,7 +237,7 @@ export const AIContentModal: React.FC<AIContentModalProps> = ({ property, isOpen
           <div className="flex items-center gap-3">
             <button
               onClick={handleSaveEdits}
-              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-semibold shadow-md shadow-blue-600/20 transition"
+              className="flex items-center gap-2 px-5 py-2.5 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-xs font-semibold shadow-md shadow-orange-700/20 transition"
             >
               <Save className="w-4 h-4" />
               <span>{language === 'es' ? 'Guardar Cambios Editados' : 'Save Edited Changes'}</span>

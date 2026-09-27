@@ -65,7 +65,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
           <div className="flex items-center gap-2">
-            <Share2 className="w-5 h-5 text-blue-600" />
+            <Share2 className="w-5 h-5 text-orange-700" />
             <h3 className="text-lg font-bold text-slate-900 dark:text-white">
               {language === 'es' ? 'Compartir y Exportar Propiedad' : 'Share & Export Property'}
             </h3>
@@ -100,7 +100,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
               href={`/property/${property.slug}`} 
               target="_blank" 
               rel="noreferrer"
-              className="p-2 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg transition"
+              className="p-2 text-orange-700 hover:bg-orange-50 dark:hover:bg-orange-900/30 rounded-lg transition"
               title="Abrir landing pública"
             >
               <ExternalLink className="w-4 h-4" />
@@ -121,7 +121,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
               />
               <button
                 onClick={handleCopy}
-                className="flex items-center gap-1.5 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition shadow-sm shrink-0"
+                className="flex items-center gap-1.5 px-4 py-2.5 bg-orange-700 hover:bg-orange-700 text-white rounded-xl text-sm font-medium transition shadow-sm shrink-0"
               >
                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 <span>{copied ? (language === 'es' ? 'Copiado' : 'Copied') : (language === 'es' ? 'Copiar' : 'Copy')}</span>
@@ -141,7 +141,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
 
             <button
               onClick={handleEmailShare}
-              className="flex items-center justify-center gap-2.5 px-4 py-3 bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/40 dark:hover:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 rounded-xl text-sm font-semibold transition"
+              className="flex items-center justify-center gap-2.5 px-4 py-3 bg-slate-50 hover:bg-slate-100 dark:bg-slate-950/40 dark:hover:bg-slate-900/40 text-slate-700 dark:text-slate-400 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-semibold transition"
             >
               <Mail className="w-4 h-4" />
               <span>Email</span>
@@ -149,7 +149,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
 
             <button
               onClick={() => setShowQR(!showQR)}
-              className="flex items-center justify-center gap-2.5 px-4 py-3 bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/40 dark:hover:bg-purple-900/40 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-800 rounded-xl text-sm font-semibold transition"
+              className="flex items-center justify-center gap-2.5 px-4 py-3 bg-orange-50 hover:bg-orange-100 dark:bg-orange-950/40 dark:hover:bg-orange-900/40 text-orange-700 dark:text-orange-300 border border-orange-200 dark:border-orange-700 rounded-xl text-sm font-semibold transition"
             >
               <QrCode className="w-4 h-4" />
               <span>{showQR ? (language === 'es' ? 'Ocultar QR' : 'Hide QR') : (language === 'es' ? 'Código QR' : 'QR Code')}</span>
@@ -157,9 +157,9 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
 
             <button
               onClick={handleExportPDF}
-              className="col-span-2 flex items-center justify-center gap-2.5 px-4 py-3.5 bg-gradient-to-r from-[#0066FF] to-[#7B2CBF] hover:opacity-95 text-white rounded-xl text-sm font-bold transition shadow-lg shadow-violet-950/30 cursor-pointer"
+              className="col-span-2 flex items-center justify-center gap-2.5 px-4 py-3.5 bg-[#C2410C] hover:bg-[#9A3412] text-white rounded-xl text-sm font-bold transition shadow-lg shadow-orange-950/30 cursor-pointer"
             >
-              <FileText className="w-4 h-4 text-cyan-300" />
+              <FileText className="w-4 h-4 text-orange-700" />
               <span>{language === 'es' ? 'Exportar Folleto Open House A4 (2 Caras)' : 'Export Open House A4 Brochure (2-Sided)'}</span>
             </button>
           </div>
@@ -176,7 +176,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ property, isOpen, onClos
               <a
                 href={qrCodeUrl}
                 download={`${property.slug}-qr-code.png`}
-                className="inline-flex items-center gap-1.5 text-xs text-blue-600 hover:underline font-semibold"
+                className="inline-flex items-center gap-1.5 text-xs text-orange-700 hover:underline font-semibold"
               >
                 <Download className="w-3.5 h-3.5" />
                 {language === 'es' ? 'Descargar imagen PNG' : 'Download PNG image'}

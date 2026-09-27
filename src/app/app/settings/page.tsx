@@ -32,7 +32,7 @@ export default function SettingsPage() {
   const [country, setCountry] = useState(user.country);
   const [userLang, setUserLang] = useState<'es' | 'en'>(user.language || 'es');
   const [currency, setCurrency] = useState<'EUR' | 'USD' | 'GBP'>(user.currency || 'EUR');
-  const [brandColor, setBrandColor] = useState(user.brandColor || '#2563eb');
+  const [brandColor, setBrandColor] = useState(user.brandColor || '#C2410C');
   const [logoUrl, setLogoUrl] = useState(user.logoUrl || '');
   const [avatarUrl, setAvatarUrl] = useState(user.avatarUrl || '');
   const [legalNotice, setLegalNotice] = useState(user.legalNotice || '');
@@ -86,7 +86,7 @@ export default function SettingsPage() {
               )}
               <button
                 type="submit"
-                className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-blue-600/20 transition"
+                className="flex items-center gap-2 px-6 py-2.5 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-orange-700/20 transition"
               >
                 <Save className="w-4 h-4" />
                 <span>{language === 'es' ? 'Guardar Cambios' : 'Save Changes'}</span>
@@ -98,7 +98,7 @@ export default function SettingsPage() {
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
             <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
               <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <User className="w-5 h-5 text-blue-600" />
+                <User className="w-5 h-5 text-orange-700" />
                 <span>{language === 'es' ? '1. Perfil del Agente y Agencia' : '1. Agent & Agency Profile'}</span>
               </h2>
             </div>
@@ -113,7 +113,7 @@ export default function SettingsPage() {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -126,7 +126,7 @@ export default function SettingsPage() {
                   required
                   value={agencyName}
                   onChange={(e) => setAgencyName(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -139,7 +139,7 @@ export default function SettingsPage() {
                   value={licenseNumber}
                   onChange={(e) => setLicenseNumber(e.target.value)}
                   placeholder="AICAT-94821 / RAICV-1029"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -152,7 +152,7 @@ export default function SettingsPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -164,7 +164,7 @@ export default function SettingsPage() {
                   type="text"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -177,7 +177,7 @@ export default function SettingsPage() {
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(e.target.value)}
                   placeholder="+34654987321"
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -189,7 +189,7 @@ export default function SettingsPage() {
                   type="text"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -201,7 +201,7 @@ export default function SettingsPage() {
                   type="text"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -211,7 +211,7 @@ export default function SettingsPage() {
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
             <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
               <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <Palette className="w-5 h-5 text-blue-600" />
+                <Palette className="w-5 h-5 text-orange-700" />
                 <span>{language === 'es' ? '2. Identidad Visual y Marca' : '2. Visual Identity & Branding'}</span>
               </h2>
             </div>
@@ -226,7 +226,7 @@ export default function SettingsPage() {
                   value={logoUrl}
                   onChange={(e) => setLogoUrl(e.target.value)}
                   placeholder="https://..."
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -239,7 +239,7 @@ export default function SettingsPage() {
                   value={avatarUrl}
                   onChange={(e) => setAvatarUrl(e.target.value)}
                   placeholder="https://..."
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 />
               </div>
 
@@ -269,7 +269,7 @@ export default function SettingsPage() {
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
             <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
               <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-blue-600" />
+                <ShieldCheck className="w-5 h-5 text-orange-700" />
                 <span>{language === 'es' ? '3. Regionalización y Textos Legales' : '3. Regionalization & Legal Compliance'}</span>
               </h2>
             </div>
@@ -282,7 +282,7 @@ export default function SettingsPage() {
                 <select
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value as 'EUR' | 'USD' | 'GBP')}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 >
                   <option value="EUR">Euro (€)</option>
                   <option value="USD">Dólar USA ($)</option>
@@ -297,7 +297,7 @@ export default function SettingsPage() {
                 <select
                   value={userLang}
                   onChange={(e) => setUserLang(e.target.value as 'es' | 'en')}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
                 >
                   <option value="es">Español</option>
                   <option value="en">English</option>
@@ -312,7 +312,7 @@ export default function SettingsPage() {
                   rows={3}
                   value={legalNotice}
                   onChange={(e) => setLegalNotice(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed"
+                  className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed"
                 />
               </div>
 
@@ -324,7 +324,7 @@ export default function SettingsPage() {
                   rows={3}
                   value={privacyNotice}
                   onChange={(e) => setPrivacyNotice(e.target.value)}
-                  className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed"
+                  className="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed"
                 />
               </div>
             </div>
@@ -346,7 +346,7 @@ export default function SettingsPage() {
 
             <button
               type="submit"
-              className="flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-600/25 transition"
+              className="flex items-center gap-2 px-8 py-3 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-orange-700/25 transition"
             >
               <Save className="w-4 h-4" />
               <span>{language === 'es' ? 'Guardar Toda la Configuración' : 'Save All Settings'}</span>

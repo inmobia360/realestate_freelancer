@@ -30,7 +30,7 @@ export const DashboardHeader: React.FC<{ title?: string; subtitle?: string }> = 
   const unreadCount = notifications.filter(n => !n.read).length;
 
   return (
-    <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-[#0d1322]/90 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-30">
+    <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-[#1A2740]/90 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-30">
       {/* Title / Breadcrumb */}
       <div>
         {title ? (
@@ -42,7 +42,7 @@ export const DashboardHeader: React.FC<{ title?: string; subtitle?: string }> = 
           <div className="flex items-center gap-2 text-xs text-slate-400">
             <span className="font-semibold text-slate-700 dark:text-slate-200">{user.agencyName}</span>
             <span>/</span>
-            <span className="text-violet-600 dark:text-violet-400 font-medium">RealEstate Connect</span>
+            <span className="text-orange-700 dark:text-orange-300 font-medium">Inmobia 360</span>
           </div>
         )}
       </div>
@@ -60,7 +60,7 @@ export const DashboardHeader: React.FC<{ title?: string; subtitle?: string }> = 
           title="Restablecer datos demo"
         >
           <RotateCcw className="w-3.5 h-3.5" />
-          <span className="hidden sm:inline">{language === 'es' ? 'Demo Data' : 'Reset Demo'}</span>
+          <span className="hidden sm:inline">{language === 'es' ? 'Datos de demo' : 'Reset demo'}</span>
         </button>
 
         {/* Theme Toggle in Header */}

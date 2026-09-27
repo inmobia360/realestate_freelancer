@@ -159,18 +159,18 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
   const googleMapsDirectLink = `https://www.google.com/maps/search/?api=1&query=${mapConfig.directQuery}`;
 
   return (
-    <div className="w-full bg-white dark:bg-[#0a0f24] border border-slate-200 dark:border-indigo-500/25 rounded-3xl p-5 sm:p-7 shadow-xl dark:shadow-2xl space-y-6">
+    <div className="w-full bg-white dark:bg-[#1A2740] border border-slate-200 dark:border-slate-500/25 rounded-3xl p-5 sm:p-7 shadow-xl dark:shadow-2xl space-y-6">
       
       {/* Top Header & View Controls */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-slate-200 dark:border-indigo-500/20">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-slate-200 dark:border-slate-500/20">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 flex items-center justify-center text-white shadow-lg shadow-violet-600/30">
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#C2410C] to-[#F4510B] flex items-center justify-center text-white shadow-lg shadow-orange-700/30">
               <Compass className="w-4 h-4" />
             </div>
             <h3 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
               <span>{language === 'es' ? 'Mapa Territorial de Inmuebles' : 'Territorial Property Map'}</span>
-              <span className="px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full bg-violet-100 text-violet-700 dark:bg-violet-500/20 dark:text-violet-300 border border-violet-200 dark:border-violet-500/30">
+              <span className="px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded-full bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300 border border-orange-200 dark:border-orange-500/30">
                 IA Geolocation
               </span>
             </h3>
@@ -188,7 +188,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
             onClick={() => setSelectedRegion('all')}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
               selectedRegion === 'all'
-                ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-lg shadow-violet-600/25'
+                ? 'bg-[#C2410C] text-white shadow-lg shadow-orange-700/25'
                 : 'bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800/80 dark:hover:bg-slate-800 dark:text-slate-400 border border-slate-200 dark:border-slate-700/60'
             }`}
           >
@@ -200,7 +200,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
               onClick={() => setSelectedRegion(reg.id)}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer whitespace-nowrap ${
                 selectedRegion === reg.id
-                  ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white shadow-lg shadow-violet-600/25'
+                  ? 'bg-[#C2410C] text-white shadow-lg shadow-orange-700/25'
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800/80 dark:hover:bg-slate-800 dark:text-slate-400 border border-slate-200 dark:border-slate-700/60'
               }`}
             >
@@ -214,36 +214,36 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         
         {/* Left: Vector Map Canvas */}
-        <div className="lg:col-span-8 bg-slate-50 dark:bg-[#060814] border border-slate-200 dark:border-indigo-500/30 rounded-2xl relative min-h-[420px] sm:min-h-[480px] p-6 overflow-hidden flex flex-col justify-between shadow-inner">
+        <div className="lg:col-span-8 bg-slate-50 dark:bg-[#1A2740] border border-slate-200 dark:border-slate-500/30 rounded-2xl relative min-h-[420px] sm:min-h-[480px] p-6 overflow-hidden flex flex-col justify-between shadow-inner">
           
           {/* Cyber Grid Lines & Ambient Glow */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b10_1px,transparent_1px),linear-gradient(to_bottom,#1e293b10_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:28px_28px]" />
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-600/10 dark:bg-violet-600/15 blur-[100px] rounded-full pointer-events-none" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-orange-700/10 dark:bg-orange-700/15 blur-[100px] rounded-full pointer-events-none" />
 
           {/* Top Map HUD Status */}
           <div className="relative z-10 flex items-center justify-between">
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/90 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700/80 backdrop-blur-md text-[11px] text-slate-700 dark:text-slate-300 font-mono">
-              <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-cyan-400 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-orange-700 dark:bg-orange-700 animate-pulse" />
               <span>RADAR DE ACTIVOS: {displayedProperties.length} UBICACIONES LOCALIZADAS</span>
             </div>
 
             <div className="flex items-center gap-1.5 bg-white/90 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700/80 p-1 rounded-xl text-[11px] font-semibold text-slate-600 dark:text-slate-400">
               <button 
                 onClick={() => setMapStyle('google')}
-                className={`px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1 ${mapStyle === 'google' ? 'bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
+                className={`px-2.5 py-1 rounded-lg transition cursor-pointer flex items-center gap-1 ${mapStyle === 'google' ? 'bg-[#C2410C] text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
               >
-                <Compass className="w-3 h-3 text-cyan-300" />
+                <Compass className="w-3 h-3 text-orange-700" />
                 <span>Google Maps</span>
               </button>
               <button 
                 onClick={() => setMapStyle('ai-dark')}
-                className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${mapStyle === 'ai-dark' ? 'bg-violet-600 text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
+                className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${mapStyle === 'ai-dark' ? 'bg-orange-700 text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
               >
                 Vector IA
               </button>
               <button 
                 onClick={() => setMapStyle('heatmap')}
-                className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${mapStyle === 'heatmap' ? 'bg-violet-600 text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
+                className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${mapStyle === 'heatmap' ? 'bg-orange-700 text-white font-bold' : 'hover:text-black dark:hover:text-white'}`}
               >
                 Cap Rate
               </button>
@@ -252,7 +252,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
 
           {/* Map Body: Google Maps Embed OR Vector Map */}
           {mapStyle === 'google' ? (
-            <div className="relative z-20 w-full h-[320px] rounded-xl overflow-hidden border border-slate-300 dark:border-indigo-500/40 my-3 shadow-xl">
+            <div className="relative z-20 w-full h-[320px] rounded-xl overflow-hidden border border-slate-300 dark:border-slate-500/40 my-3 shadow-xl">
               <iframe
                 title="Google Maps Property Geolocation"
                 src={googleMapsUrl}
@@ -271,7 +271,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 text-white rounded-xl text-[11px] font-bold border border-slate-700 hover:bg-slate-800 transition shadow-lg"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+                  <ExternalLink className="w-3.5 h-3.5 text-orange-700" />
                   <span>Abrir en Google Maps</span>
                 </a>
               </div>
@@ -280,7 +280,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
             <>
               {/* Abstract Stylized Spain & Island SVG */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30 dark:opacity-35">
-                <svg viewBox="0 0 800 600" className="w-full h-full text-indigo-400 dark:text-indigo-500 fill-indigo-100 dark:fill-indigo-950/20 stroke-indigo-400 dark:stroke-indigo-500/40 stroke-[1.5]">
+                <svg viewBox="0 0 800 600" className="w-full h-full text-slate-400 dark:text-slate-500 fill-slate-100 dark:fill-slate-950/20 stroke-slate-400 dark:stroke-slate-500/40 stroke-[1.5]">
                   <polygon points="180,180 280,140 450,130 580,180 680,220 720,290 640,360 600,450 480,510 320,530 220,490 160,380 140,260" />
                   <circle cx="680" cy="320" r="14" />
                   <circle cx="710" cy="300" r="10" />
@@ -310,18 +310,18 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
                     >
                       {/* Radar Pulse on Selected Pin */}
                       {isSelected && (
-                        <span className="absolute -inset-3 rounded-full bg-violet-500/40 animate-ping pointer-events-none" />
+                        <span className="absolute -inset-3 rounded-full bg-orange-500/40 animate-ping pointer-events-none" />
                       )}
 
                       {/* Pin Badge */}
                       <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black shadow-lg transition-transform hover:scale-110 border ${
                         isSelected
-                          ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white border-white/60 shadow-violet-600/50 scale-110 z-30'
-                          : 'bg-white dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 border-slate-300 dark:border-indigo-500/40 hover:border-violet-400 z-10'
+                          ? 'bg-[#C2410C] text-white border-white/60 shadow-orange-700/50 scale-110 z-30'
+                          : 'bg-white dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-500/40 hover:border-orange-700 z-10'
                       }`}>
-                        <MapPin className={`w-3.5 h-3.5 ${isSelected ? 'text-cyan-300' : 'text-blue-600 dark:text-violet-400'}`} />
+                        <MapPin className={`w-3.5 h-3.5 ${isSelected ? 'text-orange-700' : 'text-orange-700 dark:text-orange-300'}`} />
                         <span>{p.city.split(' ')[0]}</span>
-                        <span className="text-[10px] font-mono text-blue-600 dark:text-cyan-300">
+                        <span className="text-[10px] font-mono text-orange-700 dark:text-orange-300">
                           {p.price > 10000 ? `${Math.round(p.price / 1000)}k€` : `${p.price}€`}
                         </span>
                       </div>
@@ -333,7 +333,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
           )}
 
           {/* Bottom HUD: Regional Metrics */}
-          <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-200 dark:border-indigo-500/20 bg-white/80 dark:bg-slate-950/70 -mx-6 -mb-6 p-4 rounded-b-2xl backdrop-blur-md text-xs">
+          <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-200 dark:border-slate-500/20 bg-white/80 dark:bg-slate-950/70 -mx-6 -mb-6 p-4 rounded-b-2xl backdrop-blur-md text-xs">
             <div>
               <span className="text-slate-500 dark:text-slate-400 font-semibold block">Región Seleccionada:</span>
               <span className="text-slate-900 dark:text-white font-bold">{selectedRegion === 'all' ? 'Nacional (España)' : selectedRegion}</span>
@@ -348,14 +348,14 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
             </div>
             <div>
               <span className="text-slate-500 dark:text-slate-400 font-semibold block">Leads Registrados:</span>
-              <span className="text-violet-600 dark:text-violet-400 font-bold">45 compradores</span>
+              <span className="text-orange-700 dark:text-orange-300 font-bold">45 compradores</span>
             </div>
           </div>
 
         </div>
 
         {/* Right: Selected Property Inspector Card */}
-        <div className="lg:col-span-4 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-indigo-500/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+        <div className="lg:col-span-4 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-500/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
           
           {activeProperty ? (
             <div className="space-y-4">
@@ -369,7 +369,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 
-                <span className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-[10px] font-black uppercase tracking-wider text-cyan-300 border border-cyan-500/30">
+                <span className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-black/70 backdrop-blur-md text-[10px] font-black uppercase tracking-wider text-orange-700 border border-orange-500/30">
                   {activeProperty.operation === 'sale' ? 'En Venta' : activeProperty.operation === 'rent' ? 'En Alquiler' : 'Inversión'}
                 </span>
 
@@ -377,7 +377,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
                   <span className="text-xl font-black text-white">
                     {activeProperty.price.toLocaleString()} €
                   </span>
-                  <span className="text-xs font-bold text-violet-200">
+                  <span className="text-xs font-bold text-orange-200">
                     {activeProperty.builtArea} m²
                   </span>
                 </div>
@@ -385,7 +385,7 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
 
               {/* Details & Copy */}
               <div className="space-y-2 text-left">
-                <span className="text-[11px] font-extrabold uppercase text-violet-600 dark:text-violet-400 tracking-wider">
+                <span className="text-[11px] font-extrabold uppercase text-orange-700 dark:text-orange-300 tracking-wider">
                   {activeProperty.city} · {activeProperty.area}
                 </span>
                 <h4 className="text-base font-bold text-slate-900 dark:text-white leading-snug line-clamp-2">
@@ -426,9 +426,9 @@ export const PropertyRegionMap: React.FC<PropertyRegionMapProps> = ({
               {onOpenAIModal && (
                 <button
                   onClick={() => onOpenAIModal(activeProperty)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white text-xs font-bold shadow-lg shadow-violet-600/30 transition cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-bold shadow-lg shadow-orange-700/30 transition cursor-pointer"
                 >
-                  <Sparkles className="w-4 h-4 text-cyan-300" />
+                  <Sparkles className="w-4 h-4 text-orange-700" />
                   <span>Generar Marketing con IA</span>
                 </button>
               )}

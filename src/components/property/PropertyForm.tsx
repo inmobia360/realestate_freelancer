@@ -143,7 +143,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
           <button
             type="submit"
             disabled={saving}
-            className="flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-blue-600/20 transition disabled:opacity-50"
+            className="flex items-center gap-2 px-6 py-2.5 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-orange-700/20 transition disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             <span>{saving ? (language === 'es' ? 'Guardando...' : 'Saving...') : isEditing ? (language === 'es' ? 'Guardar Cambios' : 'Save Changes') : (language === 'es' ? 'Crear y Publicar' : 'Create & Publish')}</span>
@@ -155,7 +155,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <Building2 className="w-5 h-5 text-blue-600" />
+            <Building2 className="w-5 h-5 text-orange-700" />
             <span>{language === 'es' ? '1. Datos Principales del Inmueble' : '1. Core Property Information'}</span>
           </h2>
           <p className="text-xs text-slate-500 mt-1">
@@ -174,7 +174,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Ej: Elegante Piso Reformado con Garaje en Centro"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
             <AIWritingAdvisor
               text={title}
@@ -190,7 +190,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={status}
               onChange={(e) => setStatus(e.target.value as PropertyStatus)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="draft">{language === 'es' ? 'Borrador interno' : 'Internal Draft'}</option>
               <option value="ready">{language === 'es' ? 'Listo para publicar' : 'Ready to Publish'}</option>
@@ -209,7 +209,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={propertyType}
               onChange={(e) => setPropertyType(e.target.value as PropertyType)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="apartment">{language === 'es' ? 'Piso / Apartamento' : 'Apartment / Flat'}</option>
               <option value="house">{language === 'es' ? 'Casa / Chalet unifamiliar' : 'House / Detached Home'}</option>
@@ -230,7 +230,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={operation}
               onChange={(e) => setOperation(e.target.value as OperationType)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="sale">{language === 'es' ? 'Venta' : 'Sale'}</option>
               <option value="rent">{language === 'es' ? 'Alquiler' : 'Rent'}</option>
@@ -245,7 +245,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={condition}
               onChange={(e) => setCondition(e.target.value as PropertyCondition)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="new_construction">{language === 'es' ? 'Obra nueva' : 'New Construction'}</option>
               <option value="excellent">{language === 'es' ? 'Excelente estado' : 'Excellent Condition'}</option>
@@ -261,7 +261,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-blue-600" />
+            <MapPin className="w-5 h-5 text-orange-700" />
             <span>{language === 'es' ? '2. Ubicación y Precio' : '2. Location & Price'}</span>
           </h2>
         </div>
@@ -276,7 +276,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               required
               value={country}
               onChange={(e) => setCountry(e.target.value)}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -290,7 +290,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               value={city}
               onChange={(e) => setCity(e.target.value)}
               placeholder="Ej: Madrid, Barcelona, Valencia, Sevilla, Canarias"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -304,7 +304,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               value={area}
               onChange={(e) => setArea(e.target.value)}
               placeholder="Ej: Salamanca, Eixample, Santa Cruz, Malvarrosa"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -317,7 +317,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="Calle y número"
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -332,7 +332,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
                 min={0}
                 value={price}
                 onChange={(e) => setPrice(Number(e.target.value))}
-                className="w-full pl-3.5 pr-12 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-base focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full pl-3.5 pr-12 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-base focus:ring-2 focus:ring-orange-500 focus:outline-none"
               />
               <span className="absolute right-3.5 top-2.5 font-bold text-slate-400">
                 {currency === 'EUR' ? '€' : currency === 'USD' ? '$' : '£'}
@@ -347,7 +347,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={currency}
               onChange={(e) => setCurrency(e.target.value as 'EUR' | 'USD' | 'GBP')}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="EUR">EUR (€) - Euro</option>
               <option value="USD">USD ($) - Dólar USA</option>
@@ -361,7 +361,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <Building2 className="w-5 h-5 text-blue-600" />
+            <Building2 className="w-5 h-5 text-orange-700" />
             <span>{language === 'es' ? '3. Dimensiones y Distribución' : '3. Dimensions & Layout'}</span>
           </h2>
         </div>
@@ -377,7 +377,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               min={1}
               value={builtArea}
               onChange={(e) => setBuiltArea(Number(e.target.value))}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -391,7 +391,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               min={0}
               value={bedrooms}
               onChange={(e) => setBedrooms(Number(e.target.value))}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -405,7 +405,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               min={0}
               value={bathrooms}
               onChange={(e) => setBathrooms(Number(e.target.value))}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
           </div>
 
@@ -415,7 +415,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
                 type="checkbox"
                 checked={garage}
                 onChange={(e) => setGarage(e.target.checked)}
-                className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-orange-700 rounded focus:ring-orange-500"
               />
               <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">
                 {language === 'es' ? '¿Garaje?' : 'Garage?'}
@@ -429,7 +429,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
                 type="checkbox"
                 checked={terrace}
                 onChange={(e) => setTerrace(e.target.checked)}
-                className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-orange-700 rounded focus:ring-orange-500"
               />
               <span className="text-xs font-semibold text-slate-800 dark:text-slate-200">
                 {language === 'es' ? '¿Terraza?' : 'Terrace?'}
@@ -443,12 +443,12 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-blue-600" />
+            <Sparkles className="w-5 h-5 text-orange-700" />
             <span>{language === 'es' ? '4. Características y Descripción Libre' : '4. Features & Free Description'}</span>
           </h2>
-          <div className="mt-2 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-800 flex items-start gap-2">
-            <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-blue-800 dark:text-blue-300">
+          <div className="mt-2 p-3 bg-orange-50 dark:bg-orange-950/30 rounded-xl border border-orange-200 dark:border-orange-700 flex items-start gap-2">
+            <Info className="w-4 h-4 text-orange-700 shrink-0 mt-0.5" />
+            <p className="text-xs text-orange-700 dark:text-orange-300">
               <strong>Regla IA:</strong> El generador automático utilizará únicamente estos datos verificados. Nunca inventará precios, habitaciones ni características no indicadas aquí.
             </p>
           </div>
@@ -466,7 +466,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
               onChange={(e) => setNewFeatureInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); handleAddFeature(); } }}
               placeholder="Ej: Calefacción por aerotermia, Vistas al mar, Suelo radiante..."
-              className="flex-1 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="flex-1 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             />
             <button
               type="button"
@@ -508,7 +508,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Describe los puntos fuertes del inmueble, luminosidad, reforma, entorno, transporte..."
-            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none leading-relaxed"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none leading-relaxed"
           />
           <AIWritingAdvisor
             text={description}
@@ -525,7 +525,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={targetAudience}
               onChange={(e) => setTargetAudience(e.target.value as Property['targetAudience'])}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="families">{language === 'es' ? 'Familias / Residencial' : 'Families / Residential'}</option>
               <option value="investors">{language === 'es' ? 'Inversores (High Yield / Rentabilidad)' : 'Investors (High Yield)'}</option>
@@ -544,7 +544,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             <select
               value={contentLanguage}
               onChange={(e) => setContentLanguage(e.target.value as 'es' | 'en' | 'both')}
-              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
             >
               <option value="es">Español (ES)</option>
               <option value="en">Inglés (EN)</option>
@@ -558,7 +558,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
         <div className="border-b border-slate-100 dark:border-slate-800 pb-4">
           <h2 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <ImageIcon className="w-5 h-5 text-blue-600" />
+            <ImageIcon className="w-5 h-5 text-orange-700" />
             <span>{language === 'es' ? '5. Fotografías del Inmueble' : '5. Property Photos'}</span>
           </h2>
           <p className="text-xs text-slate-500 mt-1">
@@ -573,12 +573,12 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
             onChange={(e) => setNewImageUrl(e.target.value)}
             onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); handleAddImage(); } }}
             placeholder="https://images.unsplash.com/photo-..."
-            className="flex-1 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="flex-1 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-orange-500 focus:outline-none"
           />
           <button
             type="button"
             onClick={handleAddImage}
-            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold flex items-center gap-1 transition cursor-pointer shadow-sm"
+            className="px-4 py-2 bg-[#111A31] hover:bg-[#1A2740] text-white rounded-xl text-xs font-semibold flex items-center gap-1 transition cursor-pointer shadow-sm"
           >
             <Plus className="w-4 h-4" />
             <span>{language === 'es' ? 'Añadir Foto' : 'Add Photo'}</span>
@@ -621,7 +621,7 @@ export const PropertyForm: React.FC<PropertyFormProps> = ({ initialData, isEditi
         <button
           type="submit"
           disabled={saving}
-          className="flex items-center gap-2 px-8 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-blue-600/20 transition disabled:opacity-50"
+          className="flex items-center gap-2 px-8 py-2.5 bg-orange-700 hover:bg-orange-500 text-white rounded-xl text-sm font-semibold shadow-md shadow-orange-700/20 transition disabled:opacity-50"
         >
           <Save className="w-4 h-4" />
           <span>{saving ? (language === 'es' ? 'Guardando...' : 'Saving...') : isEditing ? (language === 'es' ? 'Guardar Cambios' : 'Save Changes') : (language === 'es' ? 'Crear Propiedad' : 'Create Property')}</span>

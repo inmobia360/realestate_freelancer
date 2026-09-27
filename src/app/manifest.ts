@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'Tu agencia inmobiliaria en el bolsillo.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#FFFFFF',
-    theme_color: '#161E2E',
+    background_color: '#F7F9FC',
+    theme_color: '#111A31',
     icons: [
       { src: '/brand/pwa-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
       { src: '/brand/pwa-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
