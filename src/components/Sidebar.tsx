@@ -72,7 +72,7 @@ export const Sidebar: React.FC = () => {
       
       {/* Brand Header */}
       <div className="px-6 py-5 border-b border-slate-200 dark:border-indigo-500/20 flex items-center justify-between">
-        <BrandLogo variant="full" size="sm" href="/" subtitleText="SaaS B2B Platform" />
+        <BrandLogo variant="full" size="sm" href="/" />
       </div>
 
       {/* Quick Action Button */}

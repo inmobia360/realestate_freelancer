@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { AppProvider } from "@/context/AppContext";
+import { DesignAgent } from "@/app/agents/DesignAgent";
+
 
 export const metadata: Metadata = {
-  title: "RealEstate Connect | Hub & Marketing Platform — SaaS B2B Inmobiliario",
-  description: "Plataforma SaaS B2B para agencias, brokers e inversores: generación multicanal de contenidos con IA, modelado de Cap Rate / Cash-Flow y scoring predictivo de compradores.",
-  keywords: ["realestate connect", "proptech saas", "ia inmobiliaria", "marketing inmobiliario b2b", "lead scoring", "cap rate calculator"],
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
+  title: "Inmobia 360 | Tu agencia inmobiliaria en el bolsillo",
+  description: "Inmobia 360 ayuda a agentes inmobiliarios a preparar tareas y documentos para que puedan revisarlos y decidir desde el móvil.",
+  keywords: ["Inmobia 360", "agencia inmobiliaria digital", "agentes inmobiliarios", "asistentes inmobiliarios"],
 };
 
 export default function RootLayout({
@@ -22,11 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es" data-theme="dark" suppressHydrationWarning className="dark h-full antialiased">
       <body className="min-h-full flex flex-col bg-[#F8FAFC] dark:bg-[#080b18] text-[#0A192F] dark:text-[#F8FAFC] selection:bg-[#7B2CBF] selection:text-white">
-        <ThemeProvider>
-          <AppProvider>
-            {children}
-          </AppProvider>
-        </ThemeProvider>
+        <DesignAgent>{children}</DesignAgent>
       </body>
     </html>
   );
