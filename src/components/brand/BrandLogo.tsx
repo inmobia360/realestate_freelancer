@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 export interface BrandLogoProps {
@@ -9,10 +9,10 @@ export interface BrandLogoProps {
 }
 
 const dimensions = {
-  sm: { icon: 'w-8 h-8', wordmark: 'text-lg' },
-  md: { icon: 'w-10 h-10', wordmark: 'text-xl sm:text-2xl' },
-  lg: { icon: 'w-12 h-12', wordmark: 'text-2xl sm:text-3xl' },
-  xl: { icon: 'w-16 h-16', wordmark: 'text-3xl sm:text-4xl' },
+  sm: { icon: 'h-8 w-8', logo: 'w-28' },
+  md: { icon: 'h-10 w-10', logo: 'w-36 sm:w-40' },
+  lg: { icon: 'h-12 w-12', logo: 'w-44 sm:w-48' },
+  xl: { icon: 'h-16 w-16', logo: 'w-56 sm:w-60' },
 };
 
 /** Inmobia 360 logo. The primary lockup intentionally has no descriptor. */
@@ -22,31 +22,19 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = '',
   href = '/',
 }) => {
-  const { icon, wordmark } = dimensions[size];
-  const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    const root = document.documentElement;
-    const syncTheme = () => setIsDark(root.classList.contains('dark'));
-    syncTheme();
-    const observer = new MutationObserver(syncTheme);
-    observer.observe(root, { attributes: true, attributeFilter: ['class'] });
-    return () => observer.disconnect();
-  }, []);
+  const { icon, logo } = dimensions[size];
   const content = (
-    <span className={`inline-flex items-center gap-3 select-none ${className}`}>
-      <img
-        src="/brand/inmobia360-isotipo-original.png"
-        alt=""
-        aria-hidden="true"
-        className={`${icon} shrink-0 rounded-full object-contain ${isDark ? 'bg-white p-0.5' : ''}`}
-        width="64"
-        height="64"
-      />
-      {variant !== 'icon' && (
-        <span className={`inline-flex items-baseline whitespace-nowrap font-extrabold leading-none ${wordmark}`}>
-          <span className={`${isDark ? 'text-white' : 'text-[#161E2E]'} tracking-[-0.055em]`}>Inmobia</span>
-          <span className="ml-[0.18em] text-[#FF8A00] tracking-[-0.04em]">360</span>
-        </span>
+    <span className={`inline-flex shrink-0 select-none ${className}`}>
+      {variant === 'icon' ? (
+        <>
+          <img src="/brand/digital/inmobia360-isotipo-transparent.png" alt="" aria-hidden="true" className={`${icon} dark:hidden`} width="64" height="64" />
+          <img src="/brand/digital/inmobia360-isotipo-transparent-dark.png" alt="" aria-hidden="true" className={`${icon} hidden dark:block`} width="64" height="64" />
+        </>
+      ) : (
+        <>
+          <img src="/brand/digital/inmobia360-logo-transparent.png" alt="Inmobia 360" className={`${logo} h-auto dark:hidden`} width="1440" height="400" />
+          <img src="/brand/digital/inmobia360-logo-transparent-dark.png" alt="Inmobia 360" className={`${logo} hidden h-auto dark:block`} width="1440" height="400" />
+        </>
       )}
     </span>
   );

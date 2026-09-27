@@ -9,6 +9,11 @@ El original `inmobia360-isotipo-original.png` es el máster transparente aprobad
 - `inmobia360-logo.svg`: alias claro para mantener la ruta anterior.
 - Los SVG incrustan el isotipo PNG; no son vectores puros.
 
+## Paquete digital descargable
+- `digital/` contiene el logotipo horizontal y el isotipo en PNG y SVG: transparente, transparente para tema oscuro, fondo claro y fondo oscuro. La versión transparente oscura usa wordmark blanco y conserva un disco blanco detrás del isotipo para legibilidad.
+- `digital/README.md` documenta nombres, dimensiones, colores y uso de cada variante.
+- `digital/inmobia360-identidad-digital.zip` reúne todos los recursos en un paquete descargable.
+
 ## Iconos y redes
 - `inmobia360-isotipo-{16,32,64,128,256,512}.png`: exportaciones transparentes derivadas del máster.
 - `favicon-{16,32,48}.png`, `/public/favicon.png`, `/public/favicon.ico`: favicons de navegador.
